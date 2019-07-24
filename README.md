@@ -6,7 +6,7 @@
 
 You want to run a Linux installation on bare metal, _and_ as a virtual machine guest, under either a Linux, Windows, or MacOS host.
 
-But attaching a physical disk as a raw VMDK is difficult through VirtualBox (but easier with VMware). Worse, the underlying device mappings change with every reboot or device attach/reattach (even if the /dev names stay the same).
+But attaching a physical disk as a raw VMDK is difficult through VirtualBox. Worse, the underlying device mappings change with every reboot or device attach/reattach (even if the /dev names stay the same).
 
 #### Solution
 
@@ -32,6 +32,8 @@ With this script, you can attach the disks
 
 (Note: Running the script on a MacOS host has not been tested, but since it's just a Bash script calling vboxmanage, it should work with little to no modification on MacOS.)
 
+## Notes
 
-
+- VMware (even Player) provides a GUI for mapping raw VMDKs, and does a decent job of not getting confused about their mappings across reboots. But if you've already chosen the mostly FLOSS VirtualBox over commercial VMware, this may not matter too much to you.
+- 
 Run this script to dynamically re-attach physical devices as raw "virtual" devices, and easily launch a virtual machine with one or more physical devices attached. This is usually very difficult, as device mappings typically are not valid across reboots.
