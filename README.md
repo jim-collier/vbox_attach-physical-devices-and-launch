@@ -1,4 +1,17 @@
-# VirtualBox: Attach physical device[s], and launch VM
+# VirtualBox: Attach physical device[s], and launch VM<!-- omit in toc -->
+
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Problems solved](#problems-solved)
+	- [Problem 1](#problem-1)
+		- [Solution](#solution)
+	- [Problem 2](#problem-2)
+		- [Solution](#solution-1)
+- [Notes](#notes)
+- [To-do](#to-do)
+	- [Windows CMD version](#windows-cmd-version)
+	- [\*nix bash version](#nix-bash-version)
 
 ## Problems solved
 
@@ -20,7 +33,7 @@ Linux runs great, without complaint, running first as a virtual machine, then a 
 
 It's truly the best of both worlds.
 
-#### Problem 2
+### Problem 2
 
 You want fast and reliable native filesystem access to locally attached disks, from an operating system that doesn't support that file system well, it at all. For example:
 
@@ -28,7 +41,7 @@ You want fast and reliable native filesystem access to locally attached disks, f
 - Native Btrfs filesystem access from within Windows, MacOS, or BSD.
 - Native NTFS filesystem access from within Linux, BSD, or MacOS.
 
-### Solution
+#### Solution
 
 With one of these scripts, you can attach the local disks to the VM as "raw" virtual disks - and even boot form one - but without the performance penalty of virtual disk images.
 
@@ -37,3 +50,15 @@ With one of these scripts, you can attach the local disks to the VM as "raw" vir
 - Running the bash script on MacOS or BSD hosts has not yet been tested.
 - VMware (even Player) provides a GUI for mapping raw VMDKs, and does a decent job of not getting confused about their mappings across reboots. But if you've already chosen the mostly FLOSS VirtualBox over commercial VMware, this may not matter too much to you.
 - This should in theory also work with Solaris, Illumos, and any other Unix/BSD/Linux-like operating system that runs Bash scripts and supports POSIX commands. (But not yet specifically tested and debugged for non-Linux platforms).
+
+## To-do
+
+### Windows CMD version
+
+- [ ] Remove unused boilerplate code
+- [ ] Remove reliance on closed-source helper program (oldchoice.exe)
+- [ ] Include source code for (or remove reliance on) open-source helper program (sleep.exe)
+
+### \*nix bash version
+
+- [ ] Remove unused boilerplate code
