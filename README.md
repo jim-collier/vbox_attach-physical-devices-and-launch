@@ -1,8 +1,7 @@
 # VirtualBox: Attach physical device[s], and launch VM<!-- omit in toc -->
 
-## Table of contents
+## Table of contents<!-- omit in toc -->
 
-- [Table of contents](#table-of-contents)
 - [Problems solved](#problems-solved)
 	- [Problem 1](#problem-1)
 		- [Solution](#solution)
