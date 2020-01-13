@@ -20,18 +20,17 @@ It's truly the best of both worlds.
 
 #### Problem 2
 
-You want fast and reliable native disk access, to disks attached to a host running an alien OS. For example:
+You want fast and reliable native filesystem access to locally attached disks, from an operating system that doesn't support it well if at all. For example:
 
-- You want fast and reliable access to a Btrfs array attached to a Windows host, "natively" through Linux.
-
-- You want native NTFS access to a USB drive formatted for NTFS, attached to a Linux host, "natively" through Windows (rather than the NTFS-3G FUSE module).
+- Native ZFS filesystem access from within Windows.
+- Native Btrfs filesystem access from within Windows, MacOS, or BSD.
+- Native NTFS filesystem access from within Linux, BSD, or MacOS.
 
 ### Solution
 
-With this script, you can attach the disks 
-
-(Note: Running the script on a MacOS host has not been tested, but since it's just a Bash script calling vboxmanage, it should work with little to no modification on MacOS.)
+With one of these scripts, you can attach the local disks to the VM as "raw" virtual disks - and even boot form one - but without the performance penalty of virtual disk images.
 
 ## Notes
 
+- Running the bash script on MacOS or BSD hosts has not yet been tested.
 - VMware (even Player) provides a GUI for mapping raw VMDKs, and does a decent job of not getting confused about their mappings across reboots. But if you've already chosen the mostly FLOSS VirtualBox over commercial VMware, this may not matter too much to you.
