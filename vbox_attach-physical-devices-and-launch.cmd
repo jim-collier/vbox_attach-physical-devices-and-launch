@@ -18,6 +18,7 @@ goto :Start
 	::			- Added vwRamMB (as first argument).
 	::			- Updated license to GPLv3.
 	::		- 20180808 JC: Added empty CD to end (for VBox extensions). Shouldn't matter if there's another one on a different controller already.
+	::		- 20200113 JC: Fixed location of helper files for generic open-source distribution.
 
 ::----------------------------------------------------------------------------------------
 :Description
@@ -832,7 +833,7 @@ goto :EOF
 	set vsFilespec_ThisScript=%~f0
 	set csFolderPath_Helpers=%~dp0
 	if "%csFolderPath_Helpers:~-1%"=="\" set csFolderPath_Helpers=%csFolderPath_Helpers:~0,-1%
-	set csFolderPath_Helpers=%csFolderPath_Helpers%\0_library_v1
+::	set csFolderPath_Helpers=%csFolderPath_Helpers%\0_library_v1
 	set csPARAMETERS_ALL=%*
 	call :Validate_VariableCannotBeNull "vsFilespec_ThisScript" "%vsFilespec_ThisScript%" & if "%vbCancel%"=="1" goto :EOF
 	call :Validate_FilespecMustExist "%vsFilespec_ThisScript%" & if "%vbCancel%"=="1" goto :EOF
