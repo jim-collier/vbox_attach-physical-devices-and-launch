@@ -3,9 +3,9 @@
 ## Table of contents<!-- omit in toc -->
 
 - [Problems solved](#problems-solved)
-	- [Problem 1](#problem-1)
+	- [Problem 1: Boot a virtual machine from a real disk](#problem-1-boot-a-virtual-machine-from-a-real-disk)
 		- [Solution](#solution)
-	- [Problem 2](#problem-2)
+	- [Problem 2: Native filesystem access to locally attached disks, from non-native OS](#problem-2-native-filesystem-access-to-locally-attached-disks-from-non-native-os)
 		- [Solution](#solution-1)
 - [Notes](#notes)
 - [To-do](#to-do)
@@ -14,7 +14,7 @@
 
 ## Problems solved
 
-### Problem 1
+### Problem 1: Boot a virtual machine from a real disk
 
 You want to run a Linux or BSD installation on bare metal, _and_ as a virtual machine guest under either Windows, MacOS, or different BSD or Linux host.
 
@@ -32,7 +32,7 @@ Linux runs great, without complaint, running first as a virtual machine, then a 
 
 It's truly the best of both worlds.
 
-### Problem 2
+### Problem 2: Native filesystem access to locally attached disks, from non-native OS
 
 You want fast and reliable native filesystem access to locally attached disks, from an operating system that doesn't support that file system well, it at all. For example:
 
