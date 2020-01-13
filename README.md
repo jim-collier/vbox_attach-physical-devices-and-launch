@@ -1,4 +1,4 @@
-# VirtualBox: Attach (raw physical) device[s], and launch VM
+# VirtualBox: Attach physical device[s], and launch VM
 
 ## Problems solved
 
@@ -35,5 +35,3 @@ With this script, you can attach the disks
 ## Notes
 
 - VMware (even Player) provides a GUI for mapping raw VMDKs, and does a decent job of not getting confused about their mappings across reboots. But if you've already chosen the mostly FLOSS VirtualBox over commercial VMware, this may not matter too much to you.
-- 
-Run this script to dynamically re-attach physical devices as raw "virtual" devices, and easily launch a virtual machine with one or more physical devices attached. This is usually very difficult, as device mappings typically are not valid across reboots.
